@@ -7,3 +7,8 @@ To install
 3. navigate to root of this repo
 4. `bundle install`
 5. navigate to /static and run `npm install` - this will require that Node and NPM are installed on your system (see here https://docs.npmjs.com/getting-started/installing-node - I believe you can also do this via Homebrew http://blog.teamtreehouse.com/install-node-js-npm-mac)
+
+Running the development environment
+
+1. navigate to root/bp/static
+2. enter `gulp watch` - this will kickoff sass and js build watchers
