@@ -22,5 +22,8 @@ module Bp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # we are bypassing the asset pipeline, so this grants us access to the /public directory
+    config.assets.enabled = false
   end
 end
