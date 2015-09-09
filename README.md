@@ -10,5 +10,5 @@ To install
 
 Running the development environment
 
-1. navigate to root/bp/public
+1. navigate to root/public
 2. enter `gulp watch` - this will kickoff sass and js build watchers
