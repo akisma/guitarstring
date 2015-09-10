@@ -83,7 +83,7 @@ $(document).ready(function(){
 
 		$.get('/api/form1')
 			.success(function(resp){
-				showResults(resp.html);
+				showResults('form1 GET worked!');
 				console.log(resp);
 			})
 			.fail(function(){
@@ -96,7 +96,7 @@ $(document).ready(function(){
 
 		$.get('/api/form2')
 			.success(function(resp){
-				showResults(resp.html);
+				showResults('form2 GET worked!');
 				console.log(resp);
 			})
 			.fail(function(){
