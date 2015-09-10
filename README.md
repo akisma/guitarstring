@@ -12,3 +12,5 @@ Running the development environment
 
 1. navigate to root/public
 2. enter `gulp watch` - this will kickoff sass and js build watchers
+3. in another terminal screen, enter `rails server`
+4. navigate to localhost:3000 in your browser
