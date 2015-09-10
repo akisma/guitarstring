@@ -21,6 +21,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+gem 'kaminari' # adds pagination to ActiveModels
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -47,3 +49,5 @@ end
 # Devise for our authentication. See documentation at http://www.gotealeaf.com/blog/how-to-use-devise-in-rails-for-authentication
 # To copy Devise views to the app for customization, run 'rails g devise:views'
 gem 'devise'
+
+
