@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :form1s
+  resource :api do
+    resources :form1
+    resources :form2
+  end
 
-  resources :form2s
+  post '/api/form1/submit' => 'form1#create'
+  post 'api/form2/submit' => 'form2#create'
 
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,7 +1,9 @@
 class Form1Controller < ApplicationController
+  skip_before_filter  :verify_authenticity_token
   def index
     @form1s = Form1.all
     @form1 ||= Form1.create(cats: 1, dog: "Your moms moms mom")
+    render json: @form1
   end
 
   def show
@@ -11,6 +13,7 @@ class Form1Controller < ApplicationController
   def create
     @form1 = Form1.create(cats: params[:cat], dog: params[:dog])
     @form1s = Form1.all
+    render json: @form1
   end
 
   def destory
