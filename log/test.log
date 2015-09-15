@@ -1,0 +1,16 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (19.0ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "forms" DISABLE TRIGGER ALL;ALTER TABLE "form1s" DISABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "form1s"
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "form1s" ("cats", "dog", "created_at", "updated_at", "id") VALUES (1, 'MyString', '2015-09-15 17:22:27', '2015-09-15 17:22:27', 980190962)[0m
+  [1m[35mFixture Insert (0.5ms)[0m  INSERT INTO "form1s" ("cats", "dog", "created_at", "updated_at", "id") VALUES (1, 'MyString', '2015-09-15 17:22:27', '2015-09-15 17:22:27', 298486374)
+  [1m[36m (8.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "forms" ENABLE TRIGGER ALL;ALTER TABLE "form1s" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1194ms (Views: 1193.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK

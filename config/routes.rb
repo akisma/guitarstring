@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
-  get 'api/login' => 'sessions#new'
-  get 'login' => 'sessions#create'
-  get 'api/logout' => 'sessions#destroy'
-  post 'api/form1' => 'forms#create'
-  post 'api/form2' => 'forms#create'
-  get 'api/form1' => 'forms#show'
-  get 'api/form2' => 'forms#show'
-  resources :articles
+
+  resources :form1s
+
+  resources :form2s
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
