@@ -1,24 +1,32 @@
 'use strict';
  
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var rename = require('gulp-rename');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var gulp 			= require('gulp'),
+	sass 			= require('gulp-ruby-sass'),
+	rename 			= require('gulp-rename'),
+	concat 			= require('gulp-concat'),
+	uglify 			= require('gulp-uglify');
  
 gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+	return sass('src/**/*.scss', { style: 'expanded', compass: true })
+        .pipe(gulp.dest('./build/css'));
 });
 
+/* can't be used until we go modular, let's make functional progress first */
 gulp.task('js-dev', function(){
-	return gulp.src(['./js/**/*.js'])
-		.pipe(concat('build.js'))
-		.pipe(gulp.dest('../app/assets/javascripts/'));
+	return gulp.src(['./src/js/**/*.js'])
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest('build/js'));
+});
+
+/* this will be used to compile js for prod */
+gulp.task('js-prod', function(){
+	return gulp.src(['./src/js/**/*.js'])
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest('build/js'));
 });
  
 gulp.task('watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch('src/sass/**/*.scss', ['sass']);
+  // gulp.watch('src/js/**/*.js', ['js-dev']);
 });
 

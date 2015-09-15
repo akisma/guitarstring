@@ -1,2 +1,8 @@
 .DS_STORE
-bp/static/node_modules/*
+bp/public/node_modules/*
+bp/tmp/cache/assets/development/*
+.sass-cache
+tmp
+tmp/*
+log
+log/*
