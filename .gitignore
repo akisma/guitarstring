@@ -3,6 +3,4 @@ bp/public/node_modules/*
 bp/tmp/cache/assets/development/*
 .sass-cache
 tmp
-tmp/*
 log
-log/*
