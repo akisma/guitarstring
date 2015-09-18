@@ -20,6 +20,26 @@ define(
 
         /* REALLY LAME QUICK AND DIRTY LINK INIT */
 
+        $('.js-test-signup').on('click', function(e){
+          e.preventDefault();
+
+          $.ajax({
+            type: 'POST',
+            url: '/api/signup', //url
+            data: {
+              username:   'yermom',
+              pw:     'yerdad',
+              email: 'yermom@yerdad.com'
+            }, 
+            dataType: 'json' //self-explanatory
+          }).success(function(resp){
+            showResults('successfully signed up');
+          })
+          .fail(function(){
+            showResults('signup did not work');
+          });
+        });
+
         $('.js-test-login').on('click', function(e){
           e.preventDefault();
 
