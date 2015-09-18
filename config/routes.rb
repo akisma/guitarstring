@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :form1
   resources :form2
 
-
   post 'form1/submit' => 'form1#create'
   post 'form2/submit' => 'form2#create'
 

@@ -1,3 +1,5 @@
+/* FORM 1 */
+
 define(
   [
     'app',
@@ -17,7 +19,7 @@ define(
       },
 
       templates: {
-        main: "#template-index"
+        main: "#template-form1" 
       }
     });
 
@@ -26,7 +28,7 @@ define(
   
     return {
       view: view,
-      name: 'index'
+      name: 'form-1' 
     };
   }
 );

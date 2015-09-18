@@ -1,3 +1,5 @@
+/* ENTRY */
+
 define(
   [
     'app',
@@ -12,12 +14,12 @@ define(
       render: function(){
         gpV.prototype.render.call(this);
 
-        
+        //need different ops here to change btwn signup and login
         
       },
 
       templates: {
-        main: "#template-index"
+        main: "#template-entry" 
       }
     });
 
@@ -26,7 +28,7 @@ define(
   
     return {
       view: view,
-      name: 'index'
+      name: 'entry' 
     };
   }
 );

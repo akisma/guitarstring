@@ -1,3 +1,5 @@
+/* LOGOUT */
+
 define(
   [
     'app',
@@ -17,7 +19,7 @@ define(
       },
 
       templates: {
-        main: "#template-index"
+        main: "#template-logout" 
       }
     });
 
@@ -26,7 +28,7 @@ define(
   
     return {
       view: view,
-      name: 'index'
+      name: 'logout' 
     };
   }
 );

@@ -86,7 +86,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.test-links li {
+.index-links li, .test-links li {
   background-color: cyan;
   padding: 5px;
   margin: 5px;

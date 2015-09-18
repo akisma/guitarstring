@@ -1,3 +1,5 @@
+/* NOT AN ACTIVE MODULE, COPY THIS FILE TO START A NEW PAGE */
+
 define(
   [
     'app',
@@ -17,7 +19,7 @@ define(
       },
 
       templates: {
-        main: "#template-index"
+        main: "#template-name" //RENAME TO BE YOUR TEMPLATE ID
       }
     });
 
@@ -26,7 +28,7 @@ define(
   
     return {
       view: view,
-      name: 'index'
+      name: 'name' //RENAME TO BE YOUR PAGE'S NAME
     };
   }
 );

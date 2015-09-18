@@ -15,15 +15,10 @@
 	  	<!--[if IE]>
 	      	<link href="/build/css/sass/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	  	<![endif]-->
-	  	<%= csrf_meta_tags %>
 
 	  	<script src="/build/js/lib/modernizr-2.8.3.min.js"></script>
 	</head>
 <body>
-
-<%= yield %>
-
-	
 
 	<!-- module views attach here -->
     <div class="js-main"></div>
@@ -79,6 +74,25 @@
 		</div>
     </script>
 
+    <script type="text/html" id="template-entry">
+        <h1>Entry</h1>
+    </script>
+
+    <script type="text/html" id="template-dashboard">
+        <h1>Dashboard</h1>
+    </script>
+
+    <script type="text/html" id="template-form1">
+        <h1>form 1</h1>
+    </script>
+
+    <script type="text/html" id="template-form2">
+        <h1>Form 2</h1>
+    </script>
+
+    <script type="text/html" id="template-logout">
+        <h1>Logout</h1>
+    </script>
 
 	<!-- FOR DEV ONLY, REFACTOR TO BE BUILDS, BUT SCRIPT ORDER NEEDS PRESERVING: MODULARRRR -->
 

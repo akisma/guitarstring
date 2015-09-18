@@ -7,7 +7,15 @@ function(app, bb) {
   var Router = Backbone.Router.extend({
     routes: {
       '':               'index',
-      'issues/:number':     'issueDetail'
+      'test':           'test',
+      'entry':          'entry',
+      'dashboard':      'dashboard',
+      'form-1':         'form1',
+      'form-2':         'form2',
+      'logout':         'logout'
+
+      //example of capturing args in routes
+      //'issues/:number':     'issueDetail'
     },
 
     loadModule: function(module){
@@ -18,13 +26,28 @@ function(app, bb) {
       require(['pages/index'], this.loadModule);
     },
 
-    issueDetail: function(number){
-      var router = this;
+    test: function() {
+      require(['pages/test'], this.loadModule);
+    },
 
-      require(['pages/issue-detail'], function(module){
-        module.findModel(number);
-        router.loadModule(module);
-      });
+    entry: function() {
+      require(['pages/entry'], this.loadModule);
+    },
+
+    dashboard: function() {
+      require(['pages/dashboard'], this.loadModule);
+    },
+
+    form1: function() {
+      require(['pages/form-1'], this.loadModule);
+    },
+
+    form2: function() {
+      require(['pages/form-2'], this.loadModule);
+    },
+
+    logout: function(){
+      require(['pages/logged-out'], this.loadModule);
     }
   });
 
