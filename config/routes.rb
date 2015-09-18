@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  resource :api do
-    resources :form1
-    resources :form2
-  end
 
-  post '/api/form1/submit' => 'form1#create'
-  post 'api/form2/submit' => 'form2#create'
+  resources :form1
+  resources :form2
+
+
+  post 'form1/submit' => 'form1#create'
+  post 'form2/submit' => 'form2#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

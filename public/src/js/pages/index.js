@@ -25,7 +25,7 @@ define(
 
           $.ajax({
             type: 'POST',
-            url: '/api/signup', //url
+            url: '/signup', //url
             data: {
               username:   'yermom',
               pw:     'yerdad',
@@ -45,7 +45,7 @@ define(
 
           $.ajax({
             type: 'POST',
-            url: '/api/login', //url
+            url: '/login', //url
             data: {
               username:   'yermom',
               pw:     'yerdad'
@@ -62,7 +62,7 @@ define(
         $('.js-test-logout').on('click', function(e){
           e.preventDefault();
 
-          $.get('/api/logout')
+          $.get('/logout')
             .success(function(resp){
               showResults('successfully logged out');
             })
@@ -76,7 +76,7 @@ define(
 
           $.ajax({
             type: 'POST',
-            url: '/api/form1/submit', //url
+            url: '/form1/submit', //url
             data: {
               cats: 33,
               dog: 'rottweiler'
@@ -95,7 +95,7 @@ define(
 
           $.ajax({
             type: 'POST',
-            url: '/api/form2/submit', //url
+            url: '/form2/submit', //url
             data: {
               cats: 1,
               dog: 'golden retriever'
@@ -112,7 +112,7 @@ define(
         $('.js-test-form1-get').on('click', function(e){
           e.preventDefault();
 
-          $.get('/api/form1')
+          $.get('/form1')
             .success(function(resp){
               showResults('form1 GET worked!');
               console.log(resp);
@@ -125,7 +125,7 @@ define(
         $('.js-test-form2-get').on('click', function(e){
           e.preventDefault();
 
-          $.get('/api/form2')
+          $.get('/form2')
             .success(function(resp){
               showResults('form2 GET worked!');
               console.log(resp);
